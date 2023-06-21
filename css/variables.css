@@ -1,0 +1,33 @@
+:root {
+
+	/* Desktop variables */
+
+	--large-text-size: 2.3vw;
+
+	--body-text-size: 1.13vw;
+
+	--small-text-size: 0.87vw;
+
+	/* Mobile variables */
+
+	--mobile-large-text-size: 8.3vw;
+	
+	--mobile-body-text-size: 5.2vw;
+
+	--mobile-small-text-size: 3.125vw;
+
+	/* Fonts */
+
+	--primary-font-family: neue-haas-grotesk-text, sans-serif;
+
+	/* Colors */
+	
+	--primary-dark: #000000;
+	--primary-light: #FFFFFF;
+	--highlight: #9747FF;
+
+	/* Gaps */
+
+	--grid-gap: 0.69444444vw;
+	--mobile-grid-gap: 2.083333vw;
+}
