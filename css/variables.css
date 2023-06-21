@@ -1,33 +1,19 @@
 :root {
-
 	/* Desktop variables */
-
 	--large-text-size: 2.3vw;
-
 	--body-text-size: 1.13vw;
-
 	--small-text-size: 0.87vw;
 
 	/* Mobile variables */
-
 	--mobile-large-text-size: 8.3vw;
-	
 	--mobile-body-text-size: 5.2vw;
-
 	--mobile-small-text-size: 3.125vw;
 
-	/* Fonts */
-
-	--primary-font-family: neue-haas-grotesk-text, sans-serif;
-
 	/* Colors */
-	
-	--primary-dark: #000000;
-	--primary-light: #FFFFFF;
-	--highlight: #9747FF;
+	--primary-dark: #27374D;
+	--primary-light: #DDE6ED;
 
 	/* Gaps */
-
-	--grid-gap: 0.69444444vw;
-	--mobile-grid-gap: 2.083333vw;
+	--grid-gap: 1rem;
+	--mobile-grid-gap: 0.5rem;
 }
