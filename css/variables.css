@@ -1,19 +1,27 @@
 :root {
 	/* Desktop variables */
-	--large-text-size: 2.3vw;
-	--body-text-size: 1.13vw;
-	--small-text-size: 0.87vw;
+	--large-text-size: 1.953rem;
+	--body-text-size: 1.563rem;
+	--small-text-size: 1.25rem;
 
 	/* Mobile variables */
-	--mobile-large-text-size: 8.3vw;
-	--mobile-body-text-size: 5.2vw;
-	--mobile-small-text-size: 3.125vw;
+	--mobile-large-text-size: 1.563rem;
+	--mobile-body-text-size: 1.25rem;
+	--mobile-small-text-size: 1rem;
 
 	/* Colors */
 	--primary-dark: #27374D;
+	--secondary-dark: #3f597c;
+	--tertiary-dark: rgba(85, 132, 154, 0.3);
 	--primary-light: #DDE6ED;
 
 	/* Gaps */
 	--grid-gap: 1rem;
 	--mobile-grid-gap: 0.5rem;
+	--padding: 0.5rem;
+	--margin: 2rem;
+
+	/* Border radius */
+	--border-raduis: 0.3rem;
+	--border-raduis-button: 0.6rem;
 }
