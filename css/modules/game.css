@@ -10,6 +10,7 @@ main {
 	width: 100%;
 	height: 100%;
 	backdrop-filter: blur(100px);
+	-webkit-backdrop-filter: blur(100px);
 }
 
 .main__cards {
@@ -21,33 +22,66 @@ main {
 	margin: var(--margin);
 }
 
-.main__cards button {
+.main__cards-card {
 	display: flex;
+	position: relative;
 	width: 100%;
 	height: 100%;
-	border-radius: var(--border-raduis);
-	overflow: hidden;
-	box-shadow: 0 0.3rem 1rem -0.2rem var(--primary-dark), 0 0.2rem 0.4rem -0.1rem var(--secondary-dark);
-	transition: all 0.2s ease-in-out;
 }
 
-.main__cards button:hover {
-	transform: scale(1.01);
-	transition: all 0.2s ease-in-out;
+.main__cards-card img {
+	position: absolute;
+	height: 100%;	
+	width: 100%;
+	object-fit: cover;
+	backface-visibility: hidden;
+	transition: all 0.8s ease-in-out;
+}
+
+.main__front-face,
+.main__back-face {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	border-radius: var(--border-raduis);
+}	
+
+.main__front-face {
+	background: var(--secondary-dark);
+	transition: all 0.8s ease-in-out;
+	transform: rotateY(0);
 	box-shadow: 0 0.3rem 1.3rem -0.2rem var(--primary-dark), 0 0.2rem 0.4rem -0.1rem var(--secondary-dark);
 }
 
-.main__cards button img {
-	height: 100%;
-	object-fit: cover;
+.main__back-face {
+	transition: all 0.8s ease-in-out;
+	transform: rotateY(-180deg);
+}
+
+.main__cards-card--flipped .main__front-face {
+	transform: rotateY(-180deg);
+}
+
+.main__cards-card--flipped .main__back-face {
+	transform: rotateY(0);
 }
 
 .main__announcement {
-	position: absolute;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--quarternary-dark);
+	width: 100vw;
+	height: 100vh;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	display: none;
+}
+
+.main__announcement--visible {
+	display: flex;
 }
 
 .main__reset {
@@ -57,7 +91,6 @@ main {
 	color: var(--primary-light);
 	border-radius: var(--border-raduis-button);
 	overflow: hidden;
-	z-index: -10;
 	font-size: var(--body-text-size);
 }
 
