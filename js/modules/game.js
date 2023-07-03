@@ -69,6 +69,22 @@ export default function Game() {
 
 		countAttempts();
 	}
+	
+	function checkMatch(cardsChosenIds) {
+		if (cardsChosenIds[0] === cardsChosenIds[1]) {
+			cardsFliped.push(cardsChosenIds);
+			//const flattenedArrayOfFlipedCards = cardsFliped.flat();
+			
+			//removeEventListeners(flattenedArrayOfFlipedCards);
+			//announceVictory(flattenedArrayOfFlipedCards);
+			emptyArrays();
+		} else {
+			setTimeout(() => {
+				flipMismachedCards();
+			}, 1000);
+		}	
+	}
+	
 	function countAttempts() {
 		const flattenedArrayOfFlipedCards = cardsFliped.flat();
 
