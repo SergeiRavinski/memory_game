@@ -50,6 +50,31 @@ export default function Game() {
 
 
 
+	function countAttempts() {
+		const flattenedArrayOfFlipedCards = cardsFliped.flat();
+
+		if (attempts < maximumAttempts - 1) {
+			attempts += 1;
+		} 
+		//Fix bugs with the victory announcement
+		else if (flattenedArrayOfFlipedCards.length === duplicatedCards.length) {
+			announceVictory(flattenedArrayOfFlipedCards);
+			console.log('Won')
+		} else {
+			attempts += 1;
+			announceDefeat();
+		}	
+		fieldAttempts.textContent = `Attempts: ${attempts} / ${maximumAttempts}`;
+		console.log(flattenedArrayOfFlipedCards.length, duplicatedCards.length)
+	}
+
+
+
+
+
+
+
+	
 	function handleResetButtonClick() {
 		attempts = 0;
 		cardsFliped = [];
