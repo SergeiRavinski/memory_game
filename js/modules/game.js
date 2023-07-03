@@ -31,5 +31,12 @@ export default function Game() {
 
 		emptyArrays();
 	}
+	
+	function handleResetButtonClick() {
+		attempts = 0;
+		cardsFliped = [];
+		shuffleCards();
+		renderHTML();
+	}
 	shuffleCards();
 }
