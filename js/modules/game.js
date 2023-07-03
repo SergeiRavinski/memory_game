@@ -31,7 +31,25 @@ export default function Game() {
 
 		emptyArrays();
 	}
-	
+
+	function emptyArrays() {
+		cardsChosenIds = [];
+		cardsChosen = [];
+	}
+
+	function announceVictory() {
+		announcement.classList.add('main__announcement--visible');
+		announcement.textContent = 'You won!';
+	}
+
+	function announceDefeat() {
+		announcement.classList.add('main__announcement--visible');
+		announcement.textContent = 'You lose!';
+	}
+
+
+
+
 	function handleResetButtonClick() {
 		attempts = 0;
 		cardsFliped = [];
