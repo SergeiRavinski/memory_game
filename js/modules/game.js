@@ -13,6 +13,8 @@ export default function Game() {
 	const announcement = document.querySelector('.main__announcement');
 	const resetButton = document.querySelector('.main__reset');
 	const duplicatedCards = [...cards, ...cards];
+	
+	resetButton.addEventListener('click', handleResetButtonClick);
 
 	function shuffleCards() {
 		duplicatedCards.sort(() => 0.5 - Math.random());
