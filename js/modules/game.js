@@ -19,5 +19,17 @@ export default function Game() {
 	function shuffleCards() {
 		duplicatedCards.sort(() => 0.5 - Math.random());
 	}
+
+	function flipCard(currentCard) {
+		currentCard.classList.add('main__cards-card--flipped');
+	}
+
+	function flipMismachedCards() {
+		for (const cardChosen of cardsChosen) {
+			cardChosen.classList.remove('main__cards-card--flipped');
+		}
+
+		emptyArrays();
+	}
 	shuffleCards();
 }
