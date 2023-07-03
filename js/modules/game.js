@@ -38,5 +38,35 @@ export default function Game() {
 		shuffleCards();
 		renderHTML();
 	}
+
+	function renderHTML() {
+		announcement.classList.remove('main__announcement--visible');
+		board.innerHTML = '';
+		fieldAttempts.textContent = `Attempts: ${attempts} / ${maximumAttempts}`;
+
+		for (const card of duplicatedCards) {
+			const button = document.createElement('button');
+			const frontFace = document.createElement('div');
+			const backFace = document.createElement('img');
+
+			button.addEventListener('click', handleCardClick);
+
+			button.className = 'main__cards-card';
+			frontFace.className = 'main__front-face';
+			backFace.className = 'main__back-face';
+
+			backFace.alt = 'Image of a boat';
+			backFace.id = `${card.name}`;
+			backFace.src = `${card.image}`;
+
+			button.append(
+				frontFace,
+				backFace
+			);
+			board.appendChild(button);
+		}	
+	}
+
 	shuffleCards();
+	renderHTML();
 }
