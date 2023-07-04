@@ -49,17 +49,11 @@ export default function Game() {
 			announcement.textContent = 'You won!';
 		}	
 	}
-		}	
-	}
 
 	function announceDefeat() {
 		announcement.classList.add('main__announcement--visible');
 		announcement.textContent = 'You lose! Try again!';
 	}
-
-
-
-
 
 	function handleCardClick(event) {
 		const currentCard = event.currentTarget;
@@ -73,22 +67,24 @@ export default function Game() {
 			lockedBoard = false;
 		}
 		
-		if (cardsChosen.length === 2) {
+		if (cardsChosen.length === 2 && lockedBoard === false) {
+			lockedBoard = true;
 			checkMatch(cardsChosenIds);
-		}
+			countAttempts(event);
+			lockedBoard = false;
 
-		countAttempts();
+		}
 	}
 	
 	function checkMatch(cardsChosenIds) {
-		if (cardsChosenIds[0] === cardsChosenIds[1]) {
+		const firstCard = cardsChosenIds[0];
+		const secondCard = cardsChosenIds[1];
+
+		if (firstCard === secondCard) {
 			cardsFliped.push(cardsChosenIds);
-			//const flattenedArrayOfFlipedCards = cardsFliped.flat();
-			
-			//removeEventListeners(flattenedArrayOfFlipedCards);
-			//announceVictory(flattenedArrayOfFlipedCards);
 			emptyArrays();
 		} else {
+			//emptyArrays();
 			setTimeout(() => {
 				flipMismachedCards();
 			}, 1000);
@@ -96,30 +92,18 @@ export default function Game() {
 	}
 	
 	function countAttempts() {
-		const flattenedArrayOfFlipedCards = cardsFliped.flat();
-
-		if (attempts < maximumAttempts - 1) {
+		//console.log(cardsChosen.length)
+		if (attempts <= maximumAttempts - 1) {
 			attempts += 1;
-		} 
-		//Fix bugs with the victory announcement
-		else if (flattenedArrayOfFlipedCards.length === duplicatedCards.length) {
-			announceVictory(flattenedArrayOfFlipedCards);
-			console.log('Won')
+			announceVictory();
 		} else {
 			attempts += 1;
 			announceDefeat();
 		}	
+
 		fieldAttempts.textContent = `Attempts: ${attempts} / ${maximumAttempts}`;
-		console.log(flattenedArrayOfFlipedCards.length, duplicatedCards.length)
 	}
 
-
-
-
-
-
-
-	
 	function handleResetButtonClick() {
 		attempts = 0;
 		cardsFliped = [];
