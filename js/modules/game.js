@@ -7,6 +7,12 @@ export default function Game() {
 	const announcement = document.querySelector('.main__announcement');
 	const resetButton = document.querySelector('.main__reset');
 	const duplicatedCards = [...cards, ...cards];
+
+	let attempts = 0;
+	let cardsChosen = [];
+	let cardsChosenIds = [];
+	let cardsFliped = [];
+	let lockedBoard = false;
 	
 	resetButton.addEventListener('click', handleResetButtonClick);
 
