@@ -7,8 +7,8 @@ main {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 	backdrop-filter: blur(100px);
 	-webkit-backdrop-filter: blur(100px);
 }
@@ -115,4 +115,23 @@ main {
 
 .main__reset:active {
 	transform: scale(0.97);
+}
+
+@media screen and (max-width: 1000px) {
+	.main__cards {
+		width: 70vw;
+		gap: var(--mobile-grid-gap);
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.main__cards {
+		width: 95vw;
+		height: 65vh;
+	}
+
+	.main__reset {
+		padding: var(--padding);
+		font-size: var(--small-text-size);
+	}
 }
