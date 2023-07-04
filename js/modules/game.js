@@ -42,8 +42,14 @@ export default function Game() {
 	}
 
 	function announceVictory() {
-		announcement.classList.add('main__announcement--visible');
-		announcement.textContent = 'You won!';
+		const flattenedArrayOfFlipedCards = cardsFliped.flat();
+
+		if (flattenedArrayOfFlipedCards.length === duplicatedCards.length ) {
+			announcement.classList.add('main__announcement--visible');
+			announcement.textContent = 'You won!';
+		}	
+	}
+		}	
 	}
 
 	function announceDefeat() {
