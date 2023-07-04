@@ -54,7 +54,7 @@ export default function Game() {
 
 	function announceDefeat() {
 		announcement.classList.add('main__announcement--visible');
-		announcement.textContent = 'You lose!';
+		announcement.textContent = 'You lose! Try again!';
 	}
 
 
