@@ -22,6 +22,7 @@ export default function Game() {
 
 	function flipCard(currentCard) {
 		currentCard.classList.add('main__cards-card--flipped');
+		currentCard.removeEventListener('click', handleCardClick);
 	}
 
 	function flipMismachedCards() {
