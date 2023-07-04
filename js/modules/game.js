@@ -28,6 +28,9 @@ export default function Game() {
 	function flipMismachedCards() {
 		for (const cardChosen of cardsChosen) {
 			cardChosen.classList.remove('main__cards-card--flipped');
+			setTimeout(() => {
+				cardChosen.addEventListener('click', handleCardClick);
+			}, 800)	
 		}
 
 		emptyArrays();
