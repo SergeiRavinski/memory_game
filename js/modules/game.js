@@ -47,12 +47,14 @@ export default function Game() {
 		if (flattenedArrayOfFlipedCards.length === duplicatedCards.length ) {
 			announcement.classList.add('main__announcement--visible');
 			announcement.textContent = 'You won!';
+			resetButton.textContent = 'Start new game';
 		}	
 	}
 
 	function announceDefeat() {
 		announcement.classList.add('main__announcement--visible');
 		announcement.textContent = 'You lose! Try again!';
+		resetButton.textContent = 'Start new game';
 	}
 
 	function handleCardClick(event) {
@@ -84,7 +86,6 @@ export default function Game() {
 			cardsFliped.push(cardsChosenIds);
 			emptyArrays();
 		} else {
-			//emptyArrays();
 			setTimeout(() => {
 				flipMismachedCards();
 			}, 1000);
@@ -115,6 +116,7 @@ export default function Game() {
 		announcement.classList.remove('main__announcement--visible');
 		board.innerHTML = '';
 		fieldAttempts.textContent = `Attempts: ${attempts} / ${maximumAttempts}`;
+		resetButton.textContent = 'Reset game';
 
 		for (const card of duplicatedCards) {
 			const button = document.createElement('button');
@@ -135,6 +137,7 @@ export default function Game() {
 				frontFace,
 				backFace
 			);
+			
 			board.appendChild(button);
 		}	
 	}
