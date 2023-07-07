@@ -23,6 +23,7 @@ export default function Game() {
 	function flipCard(currentCard) {
 		currentCard.classList.add('main__cards-card--flipped');
 		currentCard.removeEventListener('click', handleCardClick);
+		lockedBoard = false;
 	}
 
 	function flipMismachedCards() {
@@ -66,14 +67,12 @@ export default function Game() {
 			cardsChosen.push(currentCard);
 			cardsChosenIds.push(currentCardId);
 			flipCard(currentCard);
-			lockedBoard = false;
 		}
 		
 		if (cardsChosen.length === 2 && lockedBoard === false) {
 			lockedBoard = true;
 			checkMatch(cardsChosenIds);
 			countAttempts(event);
-			lockedBoard = false;
 		}
 	}
 	
@@ -85,9 +84,11 @@ export default function Game() {
 		if (firstCard === secondCard) {
 			cardsFliped.push(cardsChosenIds);
 			emptyArrays();
+			lockedBoard = false;
 		} else {
 			setTimeout(() => {
 				flipMismachedCards();
+				lockedBoard = false;
 			}, 1000);
 		}	
 	}
@@ -95,7 +96,7 @@ export default function Game() {
 	//Count the attempts
 	function countAttempts() {
 		const flattenedArrayOfFlipedCards = cardsFliped.flat();
-		console.log(cardsFliped.length, cards.length)
+
 		if (attempts <= maximumAttempts - 1) {
 			attempts += 1;
 			announceVictory();
