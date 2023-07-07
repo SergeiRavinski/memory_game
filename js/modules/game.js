@@ -44,7 +44,7 @@ export default function Game() {
 	function announceVictory() {
 		const flattenedArrayOfFlipedCards = cardsFliped.flat();
 
-		if (flattenedArrayOfFlipedCards.length === duplicatedCards.length ) {
+		if (flattenedArrayOfFlipedCards.length === duplicatedCards.length) {
 			announcement.classList.add('main__announcement--visible');
 			announcement.textContent = 'You won!';
 			resetButton.textContent = 'Start new game';
@@ -74,10 +74,10 @@ export default function Game() {
 			checkMatch(cardsChosenIds);
 			countAttempts(event);
 			lockedBoard = false;
-
 		}
 	}
 	
+	//Check if the cards are match
 	function checkMatch(cardsChosenIds) {
 		const firstCard = cardsChosenIds[0];
 		const secondCard = cardsChosenIds[1];
@@ -92,19 +92,21 @@ export default function Game() {
 		}	
 	}
 	
+	//Count the attempts
 	function countAttempts() {
-		//console.log(cardsChosen.length)
+		const flattenedArrayOfFlipedCards = cardsFliped.flat();
+		console.log(cardsFliped.length, cards.length)
 		if (attempts <= maximumAttempts - 1) {
 			attempts += 1;
 			announceVictory();
-		} else {
-			attempts += 1;
+		} else if (attempts >= maximumAttempts - 1 && flattenedArrayOfFlipedCards.length !== duplicatedCards.length) {
 			announceDefeat();
 		}	
 
 		fieldAttempts.textContent = `Attempts: ${attempts} / ${maximumAttempts}`;
 	}
 
+	//Reset or start new game 
 	function handleResetButtonClick() {
 		attempts = 0;
 		cardsFliped = [];
@@ -112,6 +114,7 @@ export default function Game() {
 		renderHTML();
 	}
 
+	//Create the board
 	function renderHTML() {
 		announcement.classList.remove('main__announcement--visible');
 		board.innerHTML = '';
@@ -137,7 +140,7 @@ export default function Game() {
 				frontFace,
 				backFace
 			);
-			
+
 			board.appendChild(button);
 		}	
 	}

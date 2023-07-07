@@ -4,24 +4,6 @@
 	padding: 0;
 }
 
-a {
-	text-decoration: none;
-	color: black;
-}
-
-a:visited {
-	text-decoration: none;
-	color: black;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-li {
-	list-style: none;
-}
-
 img {
 	width: 100%;
 }
