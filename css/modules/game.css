@@ -52,6 +52,7 @@ main {
 	transition: all 0.8s ease-in-out;
 	transform: rotateY(0);
 	box-shadow: 0 0.3rem 1.3rem -0.2rem var(--primary-dark), 0 0.2rem 0.4rem -0.1rem var(--secondary-dark);
+	-webkit-shadow: 0 0.3rem 1.3rem -0.2rem var(--primary-dark), 0 0.2rem 0.4rem -0.1rem var(--secondary-dark);
 }
 
 .main__back-face {
