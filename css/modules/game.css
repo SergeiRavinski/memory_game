@@ -91,7 +91,7 @@ main {
 	color: var(--primary-light);
 	border-radius: var(--border-raduis-button);
 	overflow: hidden;
-	font-size: var(--body-text-size);
+	font-size: var(--small-text-size);
 }
 
 .main__reset-transition {
@@ -132,6 +132,6 @@ main {
 
 	.main__reset {
 		padding: var(--padding);
-		font-size: var(--small-text-size);
+		font-size: var(--extra-small-text-size);
 	}
 }

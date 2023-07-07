@@ -1,7 +1,7 @@
 body {
 	align-items: center;
 	font-family: 'IBM Plex Mono', monospace;
-	font-size: var(--large-text-size);
+	font-size: var(--medium-text-size);
 	background: url(../../assets/images/boat_5.jpg) center / cover no-repeat;
 	width: 100vw;
 	height: 100vh;
@@ -12,6 +12,6 @@ body {
 
 @media screen and (max-width: 600px) {
 	body {
-		font-size: var(--body-text-size);
+		font-size: var(--small-text-size);
 	}
 }

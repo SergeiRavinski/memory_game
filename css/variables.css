@@ -1,7 +1,8 @@
 :root {
 	--large-text-size: 1.953rem;
-	--body-text-size: 1.563rem;
+	--medium-text-size: 1.563rem;
 	--small-text-size: 1.25rem;
+	--extra-small-text-size: 1rem;
 
 	--primary-dark: #27374D;
 	--secondary-dark: #3f597c;
