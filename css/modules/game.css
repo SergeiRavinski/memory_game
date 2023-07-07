@@ -35,6 +35,7 @@ main {
 	width: 100%;
 	object-fit: cover;
 	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
 	transition: all 0.8s ease-in-out;
 }
 
