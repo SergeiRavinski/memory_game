@@ -59,12 +59,12 @@ export default function Game() {
 
 	function handleCardClick(event) {
 		const currentCard = event.currentTarget;
-		const cardId = currentCard.childNodes[1].id;
+		const currentCardId = currentCard.childNodes[1].id;
 		
 		if (cardsChosen.length < 2 && cardsChosenIds.length < 2 && lockedBoard === false) {
 			lockedBoard = true;
 			cardsChosen.push(currentCard);
-			cardsChosenIds.push(cardId);
+			cardsChosenIds.push(currentCardId);
 			flipCard(currentCard);
 			lockedBoard = false;
 		}
