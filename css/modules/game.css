@@ -91,27 +91,14 @@ main {
 	padding: var(--padding);
 	color: var(--primary-light);
 	border-radius: var(--border-raduis-button);
-	overflow: hidden;
 	font-size: var(--small-text-size);
+	z-index: 200;
+	transition: color 0.2s ease-in-out;
 }
 
-.main__reset-transition {
-	position: absolute;
-	transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-	transition-duration: 0.5s;
-	background-color: var(--tertiary-dark);
-	border-radius: 100rem;
-	width: 0;
-	height: 0;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	z-index: -5;
- }
-
- .main__reset:hover .main__reset-transition {
-	width: 20rem;
-	height: 20rem;
+ .main__reset:hover {
+	color: var(--secondary-light);
+	transition: color 0.2s ease-in-out;
  }
 
 .main__reset:active {
