@@ -47,6 +47,8 @@ main {
 	border-radius: var(--border-raduis);
 	transition: all 0.8s ease-in-out;
 	-webkit-transition: all 0.8s ease-in-out;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
 }	
 
 .main__front-face {
@@ -59,8 +61,6 @@ main {
 .main__back-face {
 	transform: rotateY(-180deg);
 	-webkit-transform: rotateY(-180deg);
-	backface-visibility: hidden;
-	-webkit-backface-visibility: hidden;
 }
 
 .main__cards-card--flipped .main__front-face {
