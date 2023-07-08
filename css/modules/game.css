@@ -31,6 +31,8 @@ main {
 
 .main__cards-card img {
 	position: absolute;
+	top: 0;
+	left: 0;
 	height: 100%;	
 	width: 100%;
 	object-fit: cover;
@@ -42,21 +44,21 @@ main {
 .main__front-face,
 .main__back-face {
 	position: absolute;
+	top: 0;
+	left: 0;
 	height: 100%;
 	width: 100%;
 	border-radius: var(--border-raduis);
+	transition: all 0.8s ease-in-out;
 }	
 
 .main__front-face {
 	background: var(--secondary-dark);
-	transition: all 0.8s ease-in-out;
 	transform: rotateY(0);
 	box-shadow: 0 0.3rem 1.3rem -0.2rem var(--primary-dark), 0 0.2rem 0.4rem -0.1rem var(--secondary-dark);
-	-webkit-shadow: 0 0.3rem 1.3rem -0.2rem var(--primary-dark), 0 0.2rem 0.4rem -0.1rem var(--secondary-dark);
 }
 
 .main__back-face {
-	transition: all 0.8s ease-in-out;
 	transform: rotateY(-180deg);
 }
 
