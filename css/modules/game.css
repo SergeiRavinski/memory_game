@@ -9,8 +9,8 @@ main {
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	backdrop-filter: blur(100px);
-	-webkit-backdrop-filter: blur(100px);
+	/*backdrop-filter: blur(100px);
+	-webkit-backdrop-filter: blur(100px);*/
 }
 
 .main__cards {
