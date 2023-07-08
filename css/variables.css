@@ -10,6 +10,8 @@
 	--quarternary-dark: rgba(85, 132, 154, 0.9);
 	--primary-light: #DDE6ED;
 	--secondary-light: #c8d3dc;
+	--primary-gradient-color: rgba(108,201,168,0.3);
+	--secondary-gradient-color: rgba(245,255,176,0.4);
 
 	--grid-gap: 1rem;
 	--mobile-grid-gap: 0.5rem;

@@ -2,7 +2,6 @@ body {
 	align-items: center;
 	font-family: 'IBM Plex Mono', monospace;
 	font-size: var(--medium-text-size);
-	background: url(../../assets/images/boat_5.jpg) center / cover no-repeat;
 	width: 100vw;
 	height: 100vh;
 	color: var(--primary-dark);
