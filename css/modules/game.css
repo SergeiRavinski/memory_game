@@ -80,6 +80,7 @@ main {
 	align-items: center;
 	justify-content: center;
 	background: var(--quarternary-dark);
+	color: var(--secondary-light);
 	width: 100vw;
 	height: 100vh;
 	top: 50%;
