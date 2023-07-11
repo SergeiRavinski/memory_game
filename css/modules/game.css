@@ -50,6 +50,7 @@ main {
 	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	box-shadow: 0 0.3rem 1.3rem -0.2rem var(--primary-dark), 0 0.2rem 0.4rem -0.1rem var(--secondary-dark);
+	-webkit-box-shadow: 0 0.3rem 1.3rem -0.2rem var(--primary-dark), 0 0.2rem 0.4rem -0.1rem var(--secondary-dark);
 }	
 
 .main__front-face {
@@ -75,7 +76,6 @@ main {
 
 .main__announcement {
 	position: fixed;
-	display: flex;
 	align-items: center;
 	justify-content: center;
 	background: var(--quarternary-dark);
@@ -86,6 +86,7 @@ main {
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
 	display: none;
+	z-index: 100;
 }
 
 .main__announcement--visible {
