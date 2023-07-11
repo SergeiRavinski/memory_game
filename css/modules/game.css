@@ -95,7 +95,7 @@ main {
 
 .main__reset {
 	position: relative;
-	background: linear-gradient(var(--secondary-dark), var(--primary-dark), var(--primary-dark));
+	background: linear-gradient(var(--secondary-dark), var(--primary-dark));
 	padding: var(--padding);
 	color: var(--primary-light);
 	border-radius: var(--border-raduis-button);

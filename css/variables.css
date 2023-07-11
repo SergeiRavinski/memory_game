@@ -5,13 +5,13 @@
 	--extra-small-text-size: 1rem;
 
 	--primary-dark: #27374D;
-	--secondary-dark: #3f597c;
+	--secondary-dark: #264653;
 	--tertiary-dark: rgba(85, 132, 154, 0.3);
-	--quarternary-dark: rgba(85, 132, 154, 0.9);
+	--quarternary-dark: rgba(38, 70, 83, 0.8);
 	--primary-light: #DDE6ED;
 	--secondary-light: #c8d3dc;
-	--primary-gradient-color: rgba(108,201,168,0.3);
-	--secondary-gradient-color: rgba(245,255,176,0.4);
+	--primary-gradient-color: rgba(42, 157, 143, 0.6);
+	--secondary-gradient-color: rgba(233, 196, 106, 0.5);
 
 	--grid-gap: 1rem;
 	--mobile-grid-gap: 0.5rem;
