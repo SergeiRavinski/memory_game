@@ -8,7 +8,7 @@ main {
 	top: 0;
 	left: 0;
 	width: 100vw;
-	height: 100vh;
+	height: 100dvh;
 	background: var(--tertiary-dark);
 	background: linear-gradient(0deg, var(--primary-gradient-color) 0%, var(--secondary-gradient-color) 100%);
 }
@@ -29,6 +29,7 @@ main {
 	width: 100%;
 	height: 100%;
 	transform-origin: center center;
+	z-index: 0;
 }
 
 .main__cards-card img {
@@ -49,14 +50,14 @@ main {
 	-webkit-transition: all 0.8s ease-in-out;
 	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
-	box-shadow: 0 0.3rem 1.3rem -0.2rem var(--primary-dark), 0 0.2rem 0.4rem -0.1rem var(--secondary-dark);
-	-webkit-box-shadow: 0 0.3rem 1.3rem -0.2rem var(--primary-dark), 0 0.2rem 0.4rem -0.1rem var(--secondary-dark);
 }	
 
 .main__front-face {
 	background: var(--secondary-dark);
 	transform: rotateY(0);
 	-webkit-transform: rotateY(0);
+	box-shadow: 0 0.3rem 1.3rem -0.2rem var(--primary-dark), 0 0.2rem 0.4rem -0.1rem var(--secondary-dark);
+	-webkit-box-shadow: 0 0.3rem 1.3rem -0.2rem var(--primary-dark), 0 0.2rem 0.4rem -0.1rem var(--secondary-dark);
 }
 
 .main__back-face {
