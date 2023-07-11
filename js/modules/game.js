@@ -20,6 +20,9 @@ export default function Game() {
 		duplicatedCards.sort(() => 0.5 - Math.random());
 	}
 
+	/**
+	 * @param {*} currentCard - get current button
+	 */
 	function flipCard(currentCard) {
 		currentCard.classList.add('main__cards-card--flipped');
 		currentCard.removeEventListener('click', handleCardClick);
@@ -76,8 +79,10 @@ export default function Game() {
 		}
 	}
 	
-	//Check if the cards are match
-	function checkMatch(cardsChosenIds) {
+	/**
+	 * Check if the cards are match
+	 */
+	function checkMatch() {
 		const firstCard = cardsChosenIds[0];
 		const secondCard = cardsChosenIds[1];
 
@@ -93,7 +98,9 @@ export default function Game() {
 		}	
 	}
 	
-	//Count the attempts
+	/**
+	 * Count the attempts
+	 */
 	function countAttempts() {
 		const flattenedArrayOfFlipedCards = cardsFliped.flat();
 
@@ -108,7 +115,9 @@ export default function Game() {
 		fieldAttempts.textContent = `Attempts: ${attempts} / ${maximumAttempts}`;
 	}
 
-	//Reset or start new game 
+	/**
+	 * Reset or start new game
+	 */
 	function handleResetButtonClick() {
 		attempts = 0;
 		cardsFliped = [];
@@ -116,7 +125,9 @@ export default function Game() {
 		renderHTML();
 	}
 
-	//Create the board
+	/**
+	 * Create the board
+	 */
 	function renderHTML() {
 		announcement.classList.remove('main__announcement--visible');
 		board.innerHTML = '';
