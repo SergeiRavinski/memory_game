@@ -99,10 +99,11 @@ export default function Game() {
 
 		if (attempts <= maximumAttempts - 1) {
 			attempts += 1;
+		} if (attempts <= maximumAttempts) {	
 			announceVictory();
-		} else if (attempts >= maximumAttempts - 1 && flattenedArrayOfFlipedCards.length !== duplicatedCards.length) {
+		} if (attempts === maximumAttempts && flattenedArrayOfFlipedCards.length !== duplicatedCards.length) {
 			announceDefeat();
-		}	
+		} 
 
 		fieldAttempts.textContent = `Attempts: ${attempts} / ${maximumAttempts}`;
 	}
